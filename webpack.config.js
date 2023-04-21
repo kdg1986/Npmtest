@@ -8,8 +8,11 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "./umd"),
 		filename: "[name].bundle.js",
-		// libraryTarget: "umd",
+		// libraryTarget: "commonjs-static",
 		// libraryTarget: "esm",
+		library: {
+			type: "umd",
+		},
 	},
 	module: {
 		rules: [
