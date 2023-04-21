@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"lib": ["dom", "esnext"],
+		"module": "esnext",
+		"target": "es2018",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true
+	},
+	"include": ["global.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+	"exclude": ["node_modules"]
+}
