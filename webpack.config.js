@@ -13,16 +13,13 @@ const resolve = {
 
 const modules = {
 	rules: [
-		{
-			test: /\.js$/,
-			exclude: /node_modules/,
-			use: {
-				loader: "babel-loader",
-				// options: {
-				// 	presets: [["@babel/preset-env", {targets: "ie 11"}]],
-				// },
-			},
-		},
+		// {
+		// 	test: /\.js$/,
+		// 	exclude: /node_modules/,
+		// 	use: {
+		// 		loader: "babel-loader",
+		// 	},
+		// },
 		{
 			test: /\.ts$/,
 			exclude: /node_modules/,
@@ -35,9 +32,7 @@ const modules = {
 
 const plugins = [new CleanWebpackPlugin()];
 
-const experiments = {
-	topLevelAwait: true,
-};
+const experiments = {};
 
 const UMD = {
 	mode: "production",
