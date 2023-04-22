@@ -1,7 +1,7 @@
-class StringUtil {
-	constructor() {
-		console.info("YBStringUtil");
-	}
+import StringUtilInterface from "../types/StringUtilInterface";
+
+class StringUtil implements StringUtilInterface {
+	constructor() {}
 
 	queryString(url: string): {[key: string]: string} {
 		const params: {[key: string]: string} = {};

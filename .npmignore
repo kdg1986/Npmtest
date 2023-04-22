@@ -1,0 +1,8 @@
+.prettierignore
+.prettierrc
+tsconfig.json
+webpack.config.js
+jest.config.ts
+modules
+umd
+__tests__
