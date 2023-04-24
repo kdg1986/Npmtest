@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
 		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./*"],
-			"@MODULES/*": ["./modules/*"]
-		},
+		// "paths": {
+		// 	"@/*": ["./*"],
+		// 	"@MODULES/*": ["./modules/*"]
+		// },
 		"lib": ["dom", "esnext"],
 		"module": "esnext",
 		"target": "es2018",
@@ -17,5 +17,5 @@
 		"noImplicitReturns": true
 	},
 	"include": ["global.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", "__tests__"]
 }

@@ -1,1 +1,109 @@
-!function(){"use strict";var e={d:function(t,r){for(var o in r)e.o(r,o)&&!e.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:r[o]})},o:function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r:function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};e.r(t),e.d(t,{YBUtils:function(){return r}});class r{constructor(){}}r.stringUtil=new class{constructor(){}queryString(e){const t={};return e.replace(/[?&]+([^=&]+)=([^&]*)/gi,((e,r,o)=>t[r]=o)),t}},exports.YBUtils=t.YBUtils,Object.defineProperty(exports,"__esModule",{value:!0})}();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./index.ts":
+/*!******************!*\
+  !*** ./index.ts ***!
+  \******************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"YBUtils\": function() { return /* reexport safe */ _modules_index__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; }\n/* harmony export */ });\n/* harmony import */ var _modules_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/index */ \"./modules/index.ts\");\n\n// export class YBUtils {\n// \tstatic stringUtil = new StringUtil();\n// \tconstructor() {}\n// }\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_modules_index__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n\n//# sourceURL=webpack://yb-utils-final/./index.ts?");
+
+/***/ }),
+
+/***/ "./modules/StringUtil.ts":
+/*!*******************************!*\
+  !*** ./modules/StringUtil.ts ***!
+  \*******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\nclass StringUtil {\n    constructor() { }\n    queryString(url) {\n        const params = {};\n        // @ts-ignore\n        url.replace(/[?&]+([^=&]+)=([^&]*)/gi, (str, key, value) => {\n            return (params[key] = value);\n        });\n        return params;\n    }\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (StringUtil);\n\n\n//# sourceURL=webpack://yb-utils-final/./modules/StringUtil.ts?");
+
+/***/ }),
+
+/***/ "./modules/index.ts":
+/*!**************************!*\
+  !*** ./modules/index.ts ***!
+  \**************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _StringUtil__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./StringUtil */ \"./modules/StringUtil.ts\");\n\nclass YBUtils {\n    constructor() { }\n}\nYBUtils.stringUtil = new _StringUtil__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n/* harmony default export */ __webpack_exports__[\"default\"] = (YBUtils);\n\n\n//# sourceURL=webpack://yb-utils-final/./modules/index.ts?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./index.ts");
+/******/ 	exports.YBUtils = __webpack_exports__.YBUtils;
+/******/ 	exports["default"] = __webpack_exports__["default"];
+/******/ 	Object.defineProperty(exports, "__esModule", { value: true });
+/******/ 	
+/******/ })()
+;

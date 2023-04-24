@@ -4,10 +4,10 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const {BundleAnalyzerPlugin} = require("webpack-bundle-analyzer");
 
 const resolve = {
-	alias: {
-		"@": path.resolve(__dirname, "."),
-		"@MODULES": path.resolve(__dirname, "./modules"),
-	},
+	// alias: {
+	// 	"@": path.resolve(__dirname, "."),
+	// 	"@MODULES": path.resolve(__dirname, "./modules"),
+	// },
 	extensions: [".ts", ".js"],
 };
 
@@ -69,5 +69,5 @@ const ESM = {
 };
 
 module.exports = (env, options) => {
-	return [UMD, ESM];
+	return [ESM, UMD];
 };

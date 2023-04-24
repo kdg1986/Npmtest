@@ -6,7 +6,6 @@ class StringUtil implements StringUtilInterface {
 	queryString(url: string): {[key: string]: string} {
 		const params: {[key: string]: string} = {};
 		// @ts-ignore
-		// @ts-expect-error
 		url.replace(/[?&]+([^=&]+)=([^&]*)/gi, (str, key, value) => {
 			return (params[key] = value);
 		});

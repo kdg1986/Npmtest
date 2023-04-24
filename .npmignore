@@ -3,6 +3,7 @@
 tsconfig.json
 webpack.config.js
 jest.config.ts
+index.ts
 modules
 umd
 __tests__

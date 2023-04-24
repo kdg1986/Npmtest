@@ -21,7 +21,7 @@
 		"dev": "webpack -w",
 		"build": "webpack --mode production",
 		"browsers": "browserslist",
-		"test": "jest"
+		"test": "jest --watch"
 	},
 	"browserslist": [
 		"last 2 chrome version",
