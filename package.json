@@ -18,7 +18,7 @@
 		"webpack-cli": "^4.10.0"
 	},
 	"scripts": {
-		"dev": "webpack -w",
+		"dev": "webpack -w --mode development",
 		"build": "webpack --mode production",
 		"browsers": "browserslist",
 		"test": "jest --watch"

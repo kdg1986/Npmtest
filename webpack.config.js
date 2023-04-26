@@ -34,40 +34,45 @@ const plugins = [new CleanWebpackPlugin()];
 
 const experiments = {};
 
-const UMD = {
-	mode: "production",
-	entry: {ybUtils: "./index.ts"},
-	output: {
-		path: path.resolve(__dirname, "./umd"),
-		filename: "[name].umd.production.js",
-		library: {
-			type: "umd",
+const UMD = mode => {
+	return {
+		mode,
+		entry: {ybUtils: "./index.ts"},
+		output: {
+			path: path.resolve(__dirname, "./umd"),
+			filename: "[name].umd.production.js",
+			library: {
+				type: "umd",
+			},
 		},
-	},
-	module: {...modules},
-	resolve,
-	plugins,
-	experiments: {
-		topLevelAwait: true,
-	},
+		module: {...modules},
+		resolve,
+		plugins,
+		experiments: {
+			topLevelAwait: true,
+		},
+	};
 };
 
-const ESM = {
-	mode: "development",
-	entry: {ybUtils: "./index.ts"},
-	output: {
-		path: path.resolve(__dirname, "./esm"),
-		filename: "[name].esm.production.js",
-		library: {
-			type: "commonjs-static",
+const ESM = mode => {
+	return {
+		mode,
+		entry: {ybUtils: "./index.ts"},
+		output: {
+			path: path.resolve(__dirname, "./esm"),
+			filename: "[name].esm.production.js",
+			library: {
+				type: "commonjs-static",
+			},
 		},
-	},
-	module: {...modules},
-	resolve,
-	plugins,
-	experiments,
+		module: {...modules},
+		resolve,
+		plugins,
+		experiments,
+	};
 };
 
 module.exports = (env, options) => {
-	return [ESM, UMD];
+	const mode = options.mode;
+	return [ESM(mode), UMD(mode)];
 };

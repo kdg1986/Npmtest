@@ -1,4 +1,4 @@
-import StringUtilInterface from "../types/StringUtilInterface";
+import StringUtilInterface from "types/StringUtilInterface";
 
 class StringUtil implements StringUtilInterface {
 	constructor() {}
@@ -10,6 +10,11 @@ class StringUtil implements StringUtilInterface {
 			return (params[key] = value);
 		});
 		return params;
+	}
+
+	fmtNumber(numberOrString: string | number) {
+		if (["string", "number"].indexOf(typeof numberOrString) === -1) return null;
+		return String(numberOrString).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, "$1,");
 	}
 }
 
