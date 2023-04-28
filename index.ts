@@ -5,5 +5,7 @@ import YBUtils from "./modules/index";
 // 	constructor() {}
 // }
 
-export {YBUtils};
+const Test = "aaa";
+
+export {YBUtils, Test};
 export default YBUtils;

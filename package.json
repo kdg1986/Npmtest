@@ -5,10 +5,15 @@
 	"main": "main.js",
 	"author": "",
 	"license": "ISC",
+	"type": "module",
 	"devDependencies": {
+		"@rollup/plugin-babel": "^6.0.3",
 		"@types/jest": "^29.5.1",
 		"clean-webpack-plugin": "^4.0.0",
 		"jest": "^29.5.0",
+		"rollup": "^3.21.0",
+		"rollup-plugin-cdn-upload": "^1.0.5",
+		"rollup-plugin-typescript2": "^0.34.1",
 		"ts-jest": "^29.1.0",
 		"ts-loader": "^9.3.1",
 		"ts-node": "^10.9.1",
@@ -18,8 +23,10 @@
 		"webpack-cli": "^4.10.0"
 	},
 	"scripts": {
-		"dev": "webpack -w --mode development",
-		"build": "webpack --mode production",
+		"watch": "rollup -c -w",
+		"build": "rollup -c",
+		"watch:webpack": "webpack -w --mode development",
+		"build:webpack": "webpack --mode production",
 		"browsers": "browserslist",
 		"test": "jest --watch"
 	},
