@@ -18,4 +18,4 @@ class StringUtil implements StringUtilInterface {
 	}
 }
 
-export default StringUtil;
+export default new StringUtil();

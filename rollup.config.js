@@ -1,11 +1,11 @@
-import {babel} from "@rollup/plugin-babel";
+import {terser} from "rollup-plugin-terser";
 import typescript from "rollup-plugin-typescript2";
-import pkg from "./package.json" assert {type: "json"};
-import cdnUpload from "rollup-plugin-cdn-upload";
+// import pkg from "./package.json";
 
-// console.log(pkg);
+console.log(process.env.NODE_ENV);
 
 const plugins = [
+	terser(),
 	typescript({
 		tsconfig: "tsconfig.json",
 	}),
@@ -15,8 +15,8 @@ export default [
 	{
 		input: "index.ts",
 		output: [
-			{file: "bundle.cjs.js", format: "cjs"},
-			{name: "ybUtil", file: "bundle.umd.js", format: "umd"},
+			{file: "dist/ybutil.cjs.js", format: "cjs"},
+			{file: "dist/ybutil.umd.js", format: "umd", name: "ybUtil"},
 		],
 		plugins,
 	},
