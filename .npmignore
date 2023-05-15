@@ -6,4 +6,6 @@ jest.config.ts
 index.ts
 modules
 umd
+types
+dist_cdn
 __tests__
